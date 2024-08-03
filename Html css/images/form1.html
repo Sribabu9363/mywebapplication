@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Function to add internal CSS to the document
+function addStyles() {
+    const style = document.createElement('style');
+    style.textContent = `
+        /* Style the form */
+        #registrationForm {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            background-color: #f9f9f9;
+        }
+
+        /* Style the input fields */
+        #registrationForm input[type="text"],
+        #registrationForm input[type="email"],
+        #registrationForm input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        /* Style the labels */
+        #registrationForm label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        /* Style the required symbol */
+        .required {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Style the submit button */
+        #registrationForm input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Add hover effect to the submit button */
+        #registrationForm input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// Function to create the registration form
+function createRegistrationForm() {
+    // Add the CSS styles
+    addStyles();
+
+    // Create a form element
+    const form = document.createElement('form');
+    form.setAttribute('id', 'registrationForm');
+    
+    // Prevent the default form submission behavior
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        showThankYouPage();
+    });
+    
+    // Create a fieldset for each input
+    const fields = [
+        { name: 'firstName', type: 'text', placeholder: 'First Name' },
+        { name: 'lastName', type: 'text', placeholder: 'Last Name' },
+        { name: 'email', type: 'email', placeholder: 'Email' },
+        { name: 'password', type: 'password', placeholder: 'Password' }
+    ];
+
+    // Generate input fields with labels
+    fields.forEach(field => {
+        const label = document.createElement('label');
+        label.textContent = `${field.placeholder} `;
+        
+        const required = document.createElement('span');
+        required.textContent = '*';
+        required.classList.add('required');
+        label.appendChild(required);
+
+        const input = document.createElement('input');
+        input.setAttribute('type', field.type);
+        input.setAttribute('name', field.name);
+        input.setAttribute('placeholder', field.placeholder);
+        input.setAttribute('required', 'true');
+
+        form.appendChild(label);
+        form.appendChild(input);
+    });
+
+    // Create a submit button
+    const submitButton = document.createElement('input');
+    submitButton.setAttribute('type', 'submit');
+    submitButton.setAttribute('value', 'Register');
+
+    // Append the submit button to the form
+    form.appendChild(submitButton);
+    
+    // Append the form to the body
+    document.body.appendChild(form);
+}
+
+// Function to show the thank you page
+function showThankYouPage() {
+    // Clear the current content
+    document.body.innerHTML = '';
+
+    // Create a thank you message
+    const thankYouMessage = document.createElement('h1');
+    thankYouMessage.textContent = 'Thank you for registering!';
+    thankYouMessage.style.textAlign = 'center';
+    thankYouMessage.style.marginTop = '50px';
+
+    // Append the message to the body
+    document.body.appendChild(thankYouMessage);
+}
+
+// Call the function to create the form
+createRegistrationForm();
+
+    </script>
+</body>
+</html>

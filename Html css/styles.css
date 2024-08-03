@@ -1,0 +1,242 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #181717;
+background-color: #cdbebe;
+}
+
+header {
+    background-color: #677468;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+nav ul li a:hover, .dropdown:hover .dropbtn {
+    background-color: #525452;
+}
+
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #7b847b;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+nav ul li .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+nav ul li .dropdown-content a:hover {
+    background-color: #aab1aa;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+.container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #73f8f4;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .intro, .services, .portfolio, .contact {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .intro h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            font-size: 1.1em;
+            color: #fb2626;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #010000;
+            background-color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #25fc50;
+        }
+
+section {
+    padding: 80px;
+    padding-top: 70px; /* Adjust to account for fixed header height */
+      margin-bottom: 20px;
+}
+
+        section h2 {
+            color: #333;
+        }
+
+        section p {
+            color: #fb2626;
+        }
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #0f110f;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.portfolio-item {
+    display: inline-block;
+    width: 45%;
+    margin: 2.5%;
+    text-align: center;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+}
+
+.team-member {
+    display: inline-block;
+    width: 30%;
+    margin: 1.66%;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+blockquote {
+    background: #fffdfd;
+    border-left: 10px solid #f5f5f5;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote p {
+    display: inline;
+}
+
+blockquote footer {
+    text-align: right;
+    font-style: italic;
+    font-size: 0.9em;
+    color: #4b4747;
+}
+.gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .gallery-item {
+            flex: 1 1 calc(33.333% - 40px);
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.7);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 5px solid #333;
+        }
+
+        .gallery-item p {
+            padding: 10px;
+            text-align: center;
+            background-color: #f9f9f9;
+            margin: 0;
+        }
+       #contact-form {
+            margin-top: 20px;
+        }
+
+        #contact-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        #contact-form input, #contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #595757;
+            border-radius: 4px;
+        }
+
+        #contact-form button {
+            background-color: #3452e6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        #contact-form button:hover {
+            background-color: #09359c;
+        }
+footer {
+    background-color: #677468;
+    text-align: center;
+    padding: 5px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+   color: #fff;
+}
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Interior Design Works</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Interior Design Works</h1>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="index.html" draggable="true">Home</a></li>
+                <li class="dropdown">
+                    <a href="about.html" class="dropbtn" draggable="true">About</a>
+                    <div class="dropdown-content">
+                        <a href="about.html#team" draggable="true">Our Team</a>
+                        <a href="about.html#mission" draggable="true">Our Mission</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="services.html" class="dropbtn" draggable="true">Services</a>
+                    <div class="dropdown-content">
+                        <a href="services.html#residential" draggable="true">Residential</a>
+                        <a href="services.html#commercial" draggable="true">Commercial</a>
+                        <a href="services.html#custom" draggable="true">Custom Furniture</a>
+                    </div>
+                </li>
+                <li><a href="portfolio.html" draggable="true">Portfolio</a></li>
+                <li><a href="contact.html" draggable="true">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Please fill out the form below and we will get back to you as soon as possible.</p>
+            <form id="contact-form" onsubmit="showThankYouMessage(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Interior Design Works. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showThankYouMessage(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+            alert('Thank you for contacting us! We will get back to you soon.'); // Show the alert message
+            document.getElementById('contact-form').reset(); // Optionally reset the form
+        }
+    </script>
+</body>
+</html>
+
